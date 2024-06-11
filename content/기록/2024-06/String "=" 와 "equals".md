@@ -25,7 +25,7 @@ public boolean checkPassword(String password) {
 > [!tip] ChatGPT
 > ### `==` 연산자
 >
- `==` 연산자는 두 객체의 참조(reference)가 동일한지를 비교합니다. 즉, 두 객체가 같은 메모리 주소를 가리키고 있는지를 확인합니다.
+ > `==` 연산자는 두 객체의 참조(reference)가 동일한지를 비교합니다. 즉, 두 객체가 같은 메모리 주소를 가리키고 있는지를 확인합니다.
 > 
 > - `this.password == password`는 `this.password`와 `password`가 동일한 객체인지를 확인합니다.
 > - 문자열 리터럴이 아닌 경우나, 두 문자열이 서로 다른 메모리 위치에 있다면, 같은 문자열을 갖고 있더라도 `==` 연산자는 `false`를 반환합니다.
