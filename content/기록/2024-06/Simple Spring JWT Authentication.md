@@ -1,5 +1,5 @@
 ---
-title: Spring JWT Authentication
+title: 간단한 Spring JWT 인증
 draft: false
 tags:
   - Spring
