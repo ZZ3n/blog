@@ -191,7 +191,7 @@ my:
 ./gradlew clean build -Dorg.gradle.jvmargs="-Xmx4g -ea"
 ```
 
-위처럼 -D 옵션을 이용해서 변수를 넘기면, 사용할 수 있다.
+위처럼 -D 옵션을 이용해서 변수를 넘기면, 사용할 수 있다.              
 예를 들어, 위의 yaml 속의 `${DB_USER}`를 아래와 같이 넘길 수 있다.
 
 ```bash

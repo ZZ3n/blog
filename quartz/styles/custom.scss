@@ -1,3 +1,19 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+.center {
+  article {
+    h1 {
+      border-radius: 5px;
+      padding: 3 15;
+      background-color: #b2d0d2;
+      color: var(--light);
+    }
+
+    th {
+      background-color: rgba($color: #b2d0d2, $alpha: 1);
+      color: white;
+    }
+  }
+}
