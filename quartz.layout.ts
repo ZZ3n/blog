@@ -27,10 +27,16 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.RecentNotes({ linkToMore: "tags/", limit: 3, showTags: false})),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(
+      Component.RecentNotes({ linkToMore: "tags/", limit: 4, showTags: false }),
+    ),
+    Component.DesktopOnly(Component.Explorer({ folderDefaultState: "open" })),
   ],
   right: [
+    Component.MobileOnly(Component.Spacer()),
+    Component.MobileOnly(Component.Spacer()),
+    Component.MobileOnly(Component.RecentNotes({ linkToMore: "tags/", limit: 5, showTags: false })),
+    Component.MobileOnly(Component.Explorer({ folderDefaultState: "open" })),
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
@@ -45,7 +51,15 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.DesktopOnly(
+      Component.RecentNotes({ linkToMore: "tags/", limit: 5, showTags: false }),
+    ),
     Component.DesktopOnly(Component.Explorer()),
   ],
-  right: [],
+  right: [
+    Component.MobileOnly(Component.Spacer()),
+    Component.MobileOnly(Component.Spacer()),
+    Component.MobileOnly(Component.RecentNotes({ linkToMore: "tags/", limit: 3, showTags: false })),
+    Component.MobileOnly(Component.Explorer({ folderDefaultState: "open" })),
+  ],
 }
