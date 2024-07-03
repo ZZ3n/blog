@@ -33,8 +33,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.Explorer({ folderDefaultState: "open" })),
   ],
   right: [
-    Component.MobileOnly(Component.Spacer()),
-    Component.MobileOnly(Component.Spacer()),
     Component.MobileOnly(Component.RecentNotes({ linkToMore: "tags/", limit: 5, showTags: false })),
     Component.MobileOnly(Component.Explorer({ folderDefaultState: "open" })),
     Component.Graph(),
