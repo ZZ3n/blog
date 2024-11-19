@@ -153,7 +153,3 @@ nohup java -jar -Dspring.profiles.active=dev \
 ```
 
 실행할 때 `-Dxxxx`로 추가해 준다.
-
-
-# 아쉬운 점
-추가해줬는데 왜 직접 `-Dxxxx`로 추가해줘야 하는지 모르겠다...

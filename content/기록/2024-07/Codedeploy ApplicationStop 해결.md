@@ -29,7 +29,7 @@ CodeDeploy 의 배포 라이프사이클은 다음과 같다.
 문제가 된 부분은 ApplicationStop 부분이다.
 ## ApplicationStop?
 공식 문서에 따르면 ApplicatioStop 수명 주기 이벤트는...
-> 
+
 > 애플리케이션을 안전하게 종료하거나 배포 준비 중에 현재 설치된 패키지를 제거하도록 스크립트를 지정할 수 있습니다.      
 > 
 > 이 배포 수명 주기 이벤트에 사용된 AppSpec 파일 및 스크립트는       
@@ -54,6 +54,7 @@ CodeDeploy 상으로는 성공이 찍혔지만, Application(SpringBoot 서버)�
 
 # 해결법
 위에서 첨부한 링크인 [여기](https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html)에 써 있다.
+
 > 마지막으로 성공적으로 배포된 애플리케이션 수정 버전의 위치를 확인하기 위해 CodeDeploy 에이전트는   
 >  `deployment-group-id_last_successful_install` 파일에 나열된 위치를 조회합니다.    
 >
@@ -83,9 +84,9 @@ CodeDeploy 상으로는 성공이 찍혔지만, Application(SpringBoot 서버)�
 > 배포는 계속 진행됩니다. 새 수정에 이러한 수명 주기 이벤트에 대한 수정된 스크립트가 포함되어 있으면    
 > 이러한 수정 사항을 적용하지 않아도 향후 배포에 성공할 수 있습니다.
 
-콘솔을 이용하는 방법, CLI를 이용하는 방법 두 가지를 제시해 준다.
+콘솔을 이용하는 방법, CLI를 이용하는 방법 두 가지를 제시해 준다.      
 
-콘솔을 이용해서 해결 해 보자.
+콘솔을 이용해서 해결 해 보자.      
 
 ## 콘솔을 이용해서 해결하기
 ### 배포 복사
@@ -105,9 +106,9 @@ CodeDeploy 에서 마지막 실패한 배포로 들어가서,
 ApplicationStop으로 인한 CodeDeploy 문제는 해결했다.
 ![[Pasted image 20240703193128.png]]
 
-**하지만!** EC2에서 어플리케이션이 실패했다... 😂
+**하지만!** EC2에서 어플리케이션이 실패했다... 😂       
 
-**그러나!** 간단한 DB URL 설정 문제였다! 
-(db 주소만 쓰고 앞에 `jdbc:mysql://`를 안 붙였다... 🫠)
+**그러나!** 간단한 DB URL 설정 문제였다!         
+(db 주소만 쓰고 앞에 `jdbc:mysql://`를 안 붙였다... 🫠)        
 
 **해결!**
