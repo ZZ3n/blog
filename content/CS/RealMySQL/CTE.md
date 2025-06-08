@@ -1,7 +1,8 @@
 ---
 title: CTE
 draft: false
-tags: 
+tags:
+  - "#MySQL"
 date: 2025-05-17
 ---
 # **💡 MySQL 8.0 신기능 CTE 알아보기**
