@@ -2,7 +2,7 @@ name: Docker build & push image
 
 on:
   push:
-    branches: [v4]
+    branches: [never-run-this-branch]
     tags: ["v*"]
   pull_request:
     branches: [v4]
